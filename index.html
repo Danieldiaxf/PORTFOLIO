@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - Daniel Dias</title>
+  <link rel="stylesheet" href="port.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    
+    <header>
+      <h1 class="luxury-glow">Daniel Dias Fernandes</h1>
+      <p class="profession">
+        <span>Engenharia de Software</span>
+        <span class="divider">•</span>
+        <span>Análise e Desenvolvimento de Sistemas</span>
+      </p>
+    </header>
+
+    <nav class="button-row">
+      <button class="styled-button" onclick="toggleSection('sobre')">SOBRE MIM</button>
+      <button class="styled-button" onclick="toggleSection('graduacoes')">GRADUAÇÕES</button>
+      <button class="styled-button" onclick="toggleSection('cursos')">CURSOS</button>
+      <button class="styled-button" onclick="toggleSection('linguagens')">TOOLS</button>
+      <button class="styled-button" onclick="toggleSection('idiomas')">IDIOMAS</button>
+      <button class="styled-button" onclick="toggleSection('contato')">CONTATO</button>
+    </nav>
+
+    <main>
+      <div id="sobre" class="content-box">
+        <p>👨‍💻 Estudante de Engenharia de Software (UniCeub) e Desenvolvimento de Sistemas (Gran). Busco uma oportunidade para aplicar meus conhecimentos e desenvolver minhas habilidades em projetos inovadores.</p>
+      </div>
+      
+      <div id="graduacoes" class="content-box">
+        <ul>
+          <li>🎓 <strong>Engenharia de Software</strong> - UniCeub (2025 - 2029)</li>
+          <li>🎓 <strong>Análise e Desenvolvimento de Sistemas</strong> - Gran Faculdade (2024 - 2026)</li>
+        </ul>
+      </div>
+      
+      <div id="cursos" class="content-box">
+        <ul>
+          <li>📘 <strong>Curso de Inglês</strong> - Mairo Vergara</li>
+          <li>💻 <strong>Introdução à Ciência da Computação</strong> - HARVARD ONLINE</li>
+          <li>🐍 <strong>Introdução à Programação com Python</strong> - HARVARD ONLINE</li>
+          <li>🧠 <strong>Desenvolvimento WEB com IA</strong> - Alura</li>
+        </ul>
+      </div>
+      
+      <div id="linguagens" class="content-box">
+        <ul>
+          <li>🧩 C, HTML, CSS, JavaScript, Python</li>
+          <li>🗂️ SQL, NoSQL</li>
+          <li>🔧 Git & GitHub</li>
+          <li>📊 Excel, Word, Google Docs, PowerPoint</li>
+          <li>🤖 ChatGPT, Gemini, DeepSeek</li>
+        </ul>
+      </div>
+      
+      <div id="idiomas" class="content-box">
+        <p>🌐 Inglês - Nível Intermediário</p>
+      </div>
+      
+      <div id="contato" class="content-box">
+        <p>✉️ Email: <a href="mailto:danieldias@gmail.com">danieldias@gmail.com</a></p>
+        <p>📞 Telefone: (61) 9-99523338</p>
+        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/danieldiaxf" target="_blank">linkedin.com/in/danieldiaxf</a></p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle("open");
+      if (!section.classList.contains("open")) {
+        section.style.maxHeight = "0";
+        section.style.padding = "0 1rem";
+        setTimeout(() => {
+          section.removeAttribute('style');
+        }, 600);
+      }
+    }
+  </script>
+</body>
+</html>
